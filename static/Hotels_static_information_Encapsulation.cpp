@@ -6,23 +6,29 @@ class _Hotal
 {
 	int id,staff,room;//int values find way.
 	float rating;//float for star find to esey way.
-	string location,type;//only string decl
+	string type,location;//only string decl
 	static int year;//value are static
 	static string hotalName;//string will be static
 	public ://mathod are public encap
 	
 		void _hotalInput()//udf input define for class-objact
 		{
+			cout<<"Hotal Name Is "<<hotalName<<endl<<"Hotel Establish Year Is "<<year<<endl<<"==============================================================================================================="<<endl;
 			cout << "Enter your Id : ";
 			cin>>id;
-				cin>>
+				cin.ignore();
+			cout << "Enter Hotel Type (like hotel or motel) : ";
+			getline(cin,type);
+			cout << "Enter Hotel Rating (like 1 Star, 2 Start, ..., 7 Star) : ";
+			cin>> rating;
+			cin.ignore();
+			cout << "Hotel Location : ";
+			getline(cin,location);
+			cout<<"Hotel Staff Quantity : ";
+			cin>>staff;
+			cout<< "Hotel Room Quantity : ";
+			cin>>room;
 		}
-		void _hotalOutput()//udf Output define saction.
-		{
-			
-		}
-	
-};
 //- hotel_id
 //- hotel_name -static
 //- hotel_type (like hotel or motel)
@@ -31,6 +37,20 @@ class _Hotal
 //- hotel_establish_year - static
 //- hotel_staff_quantity
 //- hotel_room_quantity
+		void _hotalOutput()//udf Output define saction.
+		{
+			cout<<"Hotal Name Is "<<hotalName<<endl<<"Hotel Establish Year Is "<<year<<endl<<"==============================================================================================================="<<endl;
+			cout<< endl << "Id : "<< id << endl << "Hotal Type Are : " << type << endl << "Hotal Rating : "
+			<< rating << " Star" << endl << "Hotal Location : " << location << endl << "Staff Quantity : "
+			<< staff << endl << "Hotal Room Quantity Is " << room << endl;
+		}
+	
+};
+
+//static decl
+string _Hotal::hotalName="Namo";
+int _Hotal::year=2004;
+
 int _Size()//size Of objact
 {
 	int n;
@@ -46,7 +66,15 @@ int main()
 	int i;
 	for(i=0; i<n; i++)
 	{
-		
+		cout<<endl<<"===============================================================================================================" << endl
+		<<"Hotal Rating Record ("<<i+1<<")"<<endl;
+		h[i]._hotalInput();
+	}
+	for(i=0; i<n; i++)
+	{
+		cout<< endl <<"==============================================================================================================="<<
+		endl <<"Hotal Rating Record ("<<1+i<<")"<<endl;
+		h[i]._hotalOutput();
 	}
 	return b;
 }

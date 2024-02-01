@@ -29,14 +29,6 @@ class _Hotal
 			cout<< "Hotel Room Quantity : ";
 			cin>>room;
 		}
-//- hotel_id
-//- hotel_name -static
-//- hotel_type (like hotel or motel)
-//- hotel_rating (like 1 Star, 2 Start, ..., 7 Star)
-//- hotel_location (city name)
-//- hotel_establish_year - static
-//- hotel_staff_quantity
-//- hotel_room_quantity
 		void _hotalOutput()//udf Output define saction.
 		{
 			cout<<"Hotal Name Is "<<hotalName<<endl<<"Hotel Establish Year Is "<<year<<endl<<"==============================================================================================================="<<endl;

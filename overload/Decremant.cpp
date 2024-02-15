@@ -1,10 +1,10 @@
 #include<iostream>
 using namespace std;
 
-class Max
+class Dec
 {
 	protected:
-	int a,b;
+	int a;
 	public:
 		void setter(string find)
 		{
@@ -13,25 +13,22 @@ class Max
 		}
 		void getter()
 		{
-			cout << "M1 Is "<<a<<"--" << endl << "M2 Is "<<b<<"--";
+			cout << "M1 Is "<<a<<"++";
 		}
-		Max operator-(Max &m2)
+		Dec operator--(int)
 		{
-			Max box;
-			int n=this->a-1;
-			int n1=m2.a-1;
+			Dec box;
+			int n=--this->a;
 			box.a=n;
-			box.b=n1;
 			return box;
 		}
 };
 
 int main()
 {
-	Max m1,m2,m3;
+	Dec m1,m2;
 	m1.setter("m1");
-	m2.setter("m2");
-	m3= m1-m2;//m1.operator+(m2)
-	m3.getter();
+	m2= m1--;//m1.operator--(int)
+	m2.getter();
 	return 0;
 }

@@ -2,6 +2,7 @@
 using namespace std;
 #include<string.h>
 
+
 class Railway
 {
 	int number,time,i,c=0,o,h,m;
